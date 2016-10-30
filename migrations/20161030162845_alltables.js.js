@@ -3,8 +3,8 @@ exports.up = function(knex, Promise) {
   return knex.schema.createTable('employee',
 function(table) {
   table.increments();
-  table.string('fullName');
-  table.string('lastName');
+  table.string('first_name');
+  table.string('last_name');
   table.string('email');
 }).then(function() {
   return knex.schema.createTable('component', function(table) {
